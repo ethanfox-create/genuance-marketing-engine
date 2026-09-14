@@ -1,0 +1,23 @@
+[
+  {
+    "location_code": "loc001",
+    "description": "TBD -- placeholder, fill in real spot before printing",
+    "neighbourhood": "TBD",
+    "status": "active",
+    "scouted_at": "2026-09-14T20:56:16.764501+00:00"
+  },
+  {
+    "location_code": "loc002",
+    "description": "TBD -- placeholder, fill in real spot before printing",
+    "neighbourhood": "TBD",
+    "status": "active",
+    "scouted_at": "2026-09-14T20:56:16.776659+00:00"
+  },
+  {
+    "location_code": "loc003",
+    "description": "TBD -- placeholder, fill in real spot before printing",
+    "neighbourhood": "TBD",
+    "status": "active",
+    "scouted_at": "2026-09-14T20:56:16.787099+00:00"
+  }
+]

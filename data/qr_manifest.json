@@ -1,0 +1,56 @@
+[
+  {
+    "design_id": "gen1-20b2d3fc",
+    "location_code": "loc001",
+    "url": "https://track.prowler.example/s/gen1-20b2d3fc/loc001",
+    "qr_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\qr_codes\\gen1-20b2d3fc_loc001.png"
+  },
+  {
+    "design_id": "gen1-20b2d3fc",
+    "location_code": "loc002",
+    "url": "https://track.prowler.example/s/gen1-20b2d3fc/loc002",
+    "qr_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\qr_codes\\gen1-20b2d3fc_loc002.png"
+  },
+  {
+    "design_id": "gen1-20b2d3fc",
+    "location_code": "loc003",
+    "url": "https://track.prowler.example/s/gen1-20b2d3fc/loc003",
+    "qr_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\qr_codes\\gen1-20b2d3fc_loc003.png"
+  },
+  {
+    "design_id": "gen1-f9eabf1b",
+    "location_code": "loc001",
+    "url": "https://track.prowler.example/s/gen1-f9eabf1b/loc001",
+    "qr_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\qr_codes\\gen1-f9eabf1b_loc001.png"
+  },
+  {
+    "design_id": "gen1-f9eabf1b",
+    "location_code": "loc002",
+    "url": "https://track.prowler.example/s/gen1-f9eabf1b/loc002",
+    "qr_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\qr_codes\\gen1-f9eabf1b_loc002.png"
+  },
+  {
+    "design_id": "gen1-f9eabf1b",
+    "location_code": "loc003",
+    "url": "https://track.prowler.example/s/gen1-f9eabf1b/loc003",
+    "qr_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\qr_codes\\gen1-f9eabf1b_loc003.png"
+  },
+  {
+    "design_id": "gen1-dd4f3d84",
+    "location_code": "loc001",
+    "url": "https://track.prowler.example/s/gen1-dd4f3d84/loc001",
+    "qr_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\qr_codes\\gen1-dd4f3d84_loc001.png"
+  },
+  {
+    "design_id": "gen1-dd4f3d84",
+    "location_code": "loc002",
+    "url": "https://track.prowler.example/s/gen1-dd4f3d84/loc002",
+    "qr_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\qr_codes\\gen1-dd4f3d84_loc002.png"
+  },
+  {
+    "design_id": "gen1-dd4f3d84",
+    "location_code": "loc003",
+    "url": "https://track.prowler.example/s/gen1-dd4f3d84/loc003",
+    "qr_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\qr_codes\\gen1-dd4f3d84_loc003.png"
+  }
+]
