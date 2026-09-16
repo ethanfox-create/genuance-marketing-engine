@@ -1,0 +1,233 @@
+[
+  {
+    "design_id": "gen1-20b2d3fc",
+    "location_code": "loc001",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-20b2d3fc_loc001.png",
+    "tier1": {
+      "passed": false,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": false,
+          "detail": "1024x1536px, needs at least 1754x2480px for a3_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": null,
+    "status": "flagged"
+  },
+  {
+    "design_id": "gen1-20b2d3fc",
+    "location_code": "loc002",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-20b2d3fc_loc002.png",
+    "tier1": {
+      "passed": false,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": false,
+          "detail": "1024x1536px, needs at least 1754x2480px for a3_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": null,
+    "status": "flagged"
+  },
+  {
+    "design_id": "gen1-20b2d3fc",
+    "location_code": "loc003",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-20b2d3fc_loc003.png",
+    "tier1": {
+      "passed": false,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": false,
+          "detail": "1024x1536px, needs at least 1754x2480px for a3_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": null,
+    "status": "flagged"
+  },
+  {
+    "design_id": "gen1-f9eabf1b",
+    "location_code": "loc001",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-f9eabf1b_loc001.png",
+    "tier1": {
+      "passed": false,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": false,
+          "detail": "1024x1536px, needs at least 1240x1754px for a4_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": null,
+    "status": "flagged"
+  },
+  {
+    "design_id": "gen1-f9eabf1b",
+    "location_code": "loc002",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-f9eabf1b_loc002.png",
+    "tier1": {
+      "passed": false,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": false,
+          "detail": "1024x1536px, needs at least 1240x1754px for a4_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": null,
+    "status": "flagged"
+  },
+  {
+    "design_id": "gen1-f9eabf1b",
+    "location_code": "loc003",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-f9eabf1b_loc003.png",
+    "tier1": {
+      "passed": false,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": false,
+          "detail": "1024x1536px, needs at least 1240x1754px for a4_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": null,
+    "status": "flagged"
+  },
+  {
+    "design_id": "gen1-dd4f3d84",
+    "location_code": "loc001",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-dd4f3d84_loc001.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 600x900px for large_sticker"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": false,
+      "usable": null,
+      "concerns": [],
+      "notes": "ANTHROPIC_API_KEY is not set -- agent screening skipped. Set that environment variable to enable Tier 2 review."
+    },
+    "status": "flagged"
+  },
+  {
+    "design_id": "gen1-dd4f3d84",
+    "location_code": "loc002",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-dd4f3d84_loc002.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 600x900px for large_sticker"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": false,
+      "usable": null,
+      "concerns": [],
+      "notes": "ANTHROPIC_API_KEY is not set -- agent screening skipped. Set that environment variable to enable Tier 2 review."
+    },
+    "status": "flagged"
+  },
+  {
+    "design_id": "gen1-dd4f3d84",
+    "location_code": "loc003",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-dd4f3d84_loc003.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 600x900px for large_sticker"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": false,
+      "usable": null,
+      "concerns": [],
+      "notes": "ANTHROPIC_API_KEY is not set -- agent screening skipped. Set that environment variable to enable Tier 2 review."
+    },
+    "status": "flagged"
+  }
+]
