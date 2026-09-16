@@ -62,14 +62,15 @@ def select_survivors(performance, top_n: int = SURVIVOR_COUNT) -> list[dict]:
     as a winner just because it's absent from the bottom of the list.
 
     `performance` is the DataFrame from analysis/performance.py's
-    build_design_performance(). Returns plain genotype field dicts (just
-    the GENOTYPE_SCHEMA keys, no design_id/generation/created_at metadata)
-    so they're ready to feed into crossover/mutate/create_genotype.
+    build_design_performance(). Returns genotype field dicts (the
+    GENOTYPE_SCHEMA keys) plus design_id, so they're ready to feed into
+    crossover/mutate (which only look at the schema fields) while still
+    letting the caller record which parent design_id(s) produced a child.
     """
     rated = performance.dropna(subset=["scan_rate"]).sort_values("scan_rate", ascending=False)
     survivors = rated.head(top_n)
-    schema_fields = list(GENOTYPE_SCHEMA.keys())
-    return survivors[schema_fields].to_dict("records")
+    columns = ["design_id"] + list(GENOTYPE_SCHEMA.keys())
+    return survivors[columns].to_dict("records")
 
 
 def crossover(parent_a: dict, parent_b: dict) -> dict:
@@ -79,11 +80,14 @@ def crossover(parent_a: dict, parent_b: dict) -> dict:
 
 def mutate(genotype: dict, n_mutations: int = MUTATIONS_PER_CHILD) -> dict:
     """
-    Return a copy of `genotype` with n_mutations enum fields changed to a
-    different legal value. Free-text fields are left untouched -- see
-    module docstring.
+    Return a copy of `genotype`'s schema fields with n_mutations enum
+    fields changed to a different legal value. Free-text fields are left
+    untouched -- see module docstring. Only GENOTYPE_SCHEMA fields are
+    carried over (not e.g. design_id, if `genotype` came from
+    select_survivors()), so the result is always safe to pass straight
+    into create_genotype().
     """
-    mutated = dict(genotype)
+    mutated = {field: genotype[field] for field in GENOTYPE_SCHEMA}
     fields_to_mutate = random.sample(ENUM_FIELDS, k=min(n_mutations, len(ENUM_FIELDS)))
 
     for field in fields_to_mutate:
@@ -142,15 +146,16 @@ def build_next_generation(
     for _ in range(crossover_count):
         parent_a, parent_b = random.sample(survivors, k=2)
         child_fields = crossover(parent_a, parent_b)
-        new_generation.append(create_genotype(generation, **child_fields))
+        parents = [parent_a["design_id"], parent_b["design_id"]]
+        new_generation.append(create_genotype(generation, parents=parents, **child_fields))
 
     for _ in range(mutation_count):
         base = random.choice(survivors)
         child_fields = mutate(base)
-        new_generation.append(create_genotype(generation, **child_fields))
+        new_generation.append(create_genotype(generation, parents=[base["design_id"]], **child_fields))
 
     for _ in range(exploration_count):
         child_fields = explore(catalogue)
-        new_generation.append(create_genotype(generation, **child_fields))
+        new_generation.append(create_genotype(generation, parents=[], **child_fields))
 
     return new_generation

@@ -15,7 +15,8 @@
     "cta_prominence": "subordinate",
     "qr_placement": "bottom_right",
     "format": "a3_poster",
-    "brand_safety": "bold"
+    "brand_safety": "bold",
+    "parents": []
   },
   {
     "design_id": "gen1-f9eabf1b",
@@ -33,7 +34,8 @@
     "cta_prominence": "integrated",
     "qr_placement": "integrated",
     "format": "a4_poster",
-    "brand_safety": "conservative"
+    "brand_safety": "conservative",
+    "parents": []
   },
   {
     "design_id": "gen1-dd4f3d84",
@@ -51,6 +53,7 @@
     "cta_prominence": "dominant",
     "qr_placement": "dominant_centre",
     "format": "large_sticker",
-    "brand_safety": "moderate"
+    "brand_safety": "moderate",
+    "parents": []
   }
 ]

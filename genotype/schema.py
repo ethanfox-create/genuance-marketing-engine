@@ -142,11 +142,16 @@ def validate_genotype(values: dict) -> None:
         raise ValueError(f"Unknown field(s) not in schema: {sorted(unknown)}")
 
 
-def create_genotype(generation: int, **attribute_values) -> dict:
+def create_genotype(generation: int, parents: list[str] | None = None, **attribute_values) -> dict:
     """
     Build one validated genotype record.
 
     generation         -- which generation this design belongs to (1, 2, 3, ...)
+    parents             -- design_id(s) of the genotype(s) this one was bred from,
+                            for tracing the evolutionary tree later: two parents
+                            means crossover, one means mutation, none means either
+                            a hand-authored design (generation 1) or exploration
+                            (Stage 6's fully-random operation). Defaults to [].
     **attribute_values -- one keyword argument per field in GENOTYPE_SCHEMA, e.g.:
 
         create_genotype(
@@ -171,6 +176,7 @@ def create_genotype(generation: int, **attribute_values) -> dict:
                      QR generator to build per-location tracking URLs)
       generation -- which generation produced it
       created_at -- ISO-8601 UTC timestamp
+      parents    -- list of parent design_id(s), possibly empty
     """
     validate_genotype(attribute_values)
 
@@ -178,5 +184,6 @@ def create_genotype(generation: int, **attribute_values) -> dict:
         "design_id": f"gen{generation}-{uuid.uuid4().hex[:8]}",
         "generation": generation,
         "created_at": datetime.now(timezone.utc).isoformat(),
+        "parents": parents or [],
         **attribute_values,
     }
