@@ -76,10 +76,28 @@ RSVP_PAGE = """
 """
 
 
+FAKE_404_PAGE = """
+<!doctype html>
+<html>
+<head><title>404 Not Found</title></head>
+<body>
+<h1>Not Found</h1>
+<p>The requested URL was not found on this server.</p>
+</body>
+</html>
+"""
+
+
 @app.route("/")
 def health_check():
-    """Lets a hosting platform (or you) confirm the server is up, without naming the project to any visitor."""
-    return jsonify({"status": "ok"})
+    """
+    Anyone who visits the bare domain directly (not via a QR scan) should
+    see an ordinary, unremarkable "broken link" -- not a JSON payload that
+    gives away this is a tracking API. Still returns HTTP 200 (not a real
+    404 status) so hosting-platform health checks, which just care that
+    the server responds, keep passing.
+    """
+    return FAKE_404_PAGE
 
 
 @app.route("/rsvp")
