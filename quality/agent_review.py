@@ -36,6 +36,24 @@ and should NOT be flagged. If it looks like a normal, usable advertisement, usab
 concerns list."""
 
 
+def _strip_markdown_fence(text: str) -> str:
+    """
+    Strip a ```json ... ``` or ``` ... ``` code fence if the model wrapped
+    its answer in one, despite the prompt asking for JSON only -- this is
+    common enough LLM behavior that it's worth handling rather than
+    treating every fenced response as a parse failure.
+    """
+    text = text.strip()
+    if text.startswith("```"):
+        text = text[3:]
+        if text.startswith("json"):
+            text = text[4:]
+        if text.endswith("```"):
+            text = text[:-3]
+        text = text.strip()
+    return text
+
+
 def _client() -> Anthropic | None:
     api_key = os.environ.get("ANTHROPIC_API_KEY")
     if not api_key:
@@ -85,7 +103,7 @@ def review_poster(image_path: Path) -> dict:
 
     raw_text = response.content[0].text
     try:
-        result = json.loads(raw_text)
+        result = json.loads(_strip_markdown_fence(raw_text))
     except json.JSONDecodeError:
         return {
             "configured": True,

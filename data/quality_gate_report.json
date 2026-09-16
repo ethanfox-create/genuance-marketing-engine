@@ -21,12 +21,12 @@
       }
     },
     "tier2": {
-      "configured": false,
-      "usable": null,
+      "configured": true,
+      "usable": true,
       "concerns": [],
-      "notes": "ANTHROPIC_API_KEY is not set -- agent screening skipped. Set that environment variable to enable Tier 2 review."
+      "notes": "Professional nightlife/dating app advertisement with clear messaging, legible text, readable QR code, and appropriate imagery for outdoor promotion."
     },
-    "status": "flagged"
+    "status": "approved"
   },
   {
     "design_id": "gen1-20b2d3fc",
@@ -50,12 +50,12 @@
       }
     },
     "tier2": {
-      "configured": false,
-      "usable": null,
+      "configured": true,
+      "usable": true,
       "concerns": [],
-      "notes": "ANTHROPIC_API_KEY is not set -- agent screening skipped. Set that environment variable to enable Tier 2 review."
+      "notes": "Professional advertisement for an exclusive event with clear messaging, readable text, unobstructed QR code, and tasteful imagery appropriate for public display."
     },
-    "status": "flagged"
+    "status": "approved"
   },
   {
     "design_id": "gen1-20b2d3fc",
@@ -79,12 +79,12 @@
       }
     },
     "tier2": {
-      "configured": false,
-      "usable": null,
+      "configured": true,
+      "usable": true,
       "concerns": [],
-      "notes": "ANTHROPIC_API_KEY is not set -- agent screening skipped. Set that environment variable to enable Tier 2 review."
+      "notes": "Professional advertisement with clear text, readable QR code, and appropriate provocative styling for a dating/social app targeting young adults."
     },
-    "status": "flagged"
+    "status": "approved"
   },
   {
     "design_id": "gen1-f9eabf1b",
@@ -108,12 +108,12 @@
       }
     },
     "tier2": {
-      "configured": false,
-      "usable": null,
+      "configured": true,
+      "usable": true,
       "concerns": [],
-      "notes": "ANTHROPIC_API_KEY is not set -- agent screening skipped. Set that environment variable to enable Tier 2 review."
+      "notes": "Clean, professional invite-only event advertisement with legible text, clear QR code, and appropriate provocative tone for the target audience."
     },
-    "status": "flagged"
+    "status": "approved"
   },
   {
     "design_id": "gen1-f9eabf1b",
@@ -137,12 +137,12 @@
       }
     },
     "tier2": {
-      "configured": false,
-      "usable": null,
+      "configured": true,
+      "usable": true,
       "concerns": [],
-      "notes": "ANTHROPIC_API_KEY is not set -- agent screening skipped. Set that environment variable to enable Tier 2 review."
+      "notes": "Clean, provocative invitation poster with clear typography, readable QR code, and appropriate tone for an exclusive event advertisement."
     },
-    "status": "flagged"
+    "status": "approved"
   },
   {
     "design_id": "gen1-f9eabf1b",
@@ -166,12 +166,12 @@
       }
     },
     "tier2": {
-      "configured": false,
-      "usable": null,
+      "configured": true,
+      "usable": true,
       "concerns": [],
-      "notes": "ANTHROPIC_API_KEY is not set -- agent screening skipped. Set that environment variable to enable Tier 2 review."
+      "notes": "A sleek, minimalist invite-only event advertisement with clear typography, readable QR code, and sophisticated dark aesthetic appropriate for outdoor posting."
     },
-    "status": "flagged"
+    "status": "approved"
   },
   {
     "design_id": "gen1-dd4f3d84",
@@ -195,12 +195,12 @@
       }
     },
     "tier2": {
-      "configured": false,
-      "usable": null,
+      "configured": true,
+      "usable": true,
       "concerns": [],
-      "notes": "ANTHROPIC_API_KEY is not set -- agent screening skipped. Set that environment variable to enable Tier 2 review."
+      "notes": "A visually polished advertisement with clear typography, vibrant abstract background, and a readable QR code promoting an event reservation with an intriguing, tasteful tone appropriate for public display."
     },
-    "status": "flagged"
+    "status": "approved"
   },
   {
     "design_id": "gen1-dd4f3d84",
@@ -224,12 +224,12 @@
       }
     },
     "tier2": {
-      "configured": false,
-      "usable": null,
+      "configured": true,
+      "usable": true,
       "concerns": [],
-      "notes": "ANTHROPIC_API_KEY is not set -- agent screening skipped. Set that environment variable to enable Tier 2 review."
+      "notes": "Professional event invitation poster with clear typography, vibrant design, legible QR code, and appropriate content for public advertising."
     },
-    "status": "flagged"
+    "status": "approved"
   },
   {
     "design_id": "gen1-dd4f3d84",
@@ -253,11 +253,11 @@
       }
     },
     "tier2": {
-      "configured": false,
-      "usable": null,
+      "configured": true,
+      "usable": true,
       "concerns": [],
-      "notes": "ANTHROPIC_API_KEY is not set -- agent screening skipped. Set that environment variable to enable Tier 2 review."
+      "notes": "Visually polished mystery event advertisement with clear messaging and scannable QR code, appropriate for public posting."
     },
-    "status": "flagged"
+    "status": "approved"
   }
 ]
