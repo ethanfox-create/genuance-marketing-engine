@@ -29,12 +29,14 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 for _subfolder in ("genotype", "tracking", "generation", "analysis", "reproduction", "quality"):
     sys.path.insert(0, str(PROJECT_ROOT / _subfolder))
 
-from catalogue import load_catalogue  # noqa: E402
-from flask import Flask, send_from_directory  # noqa: E402
+from catalogue import add_genotype, load_catalogue  # noqa: E402
+from flask import Flask, request, send_from_directory  # noqa: E402
 from locations import active_location_codes  # noqa: E402
 from pipeline import build_posters  # noqa: E402
 from qr_generator import BASE_TRACKING_URL, build_tracking_url, generate_qr_code  # noqa: E402
 from quality_gate import run_quality_gate  # noqa: E402
+from reproduce import explore  # noqa: E402
+from schema import GENOTYPE_SCHEMA, create_genotype  # noqa: E402
 
 import run_cycle  # Stage 8 orchestrator, lives alongside this file  # noqa: E402
 
@@ -70,6 +72,17 @@ PAGE = """
   .thumb {{ width: 70px; height: 105px; object-fit: cover; border-radius: 4px; border: 1px solid #333; }}
   .status-approved {{ color: #39FF88; }}
   .status-flagged {{ color: #ffb020; }}
+  details {{ margin-top: 8px; }}
+  summary {{ cursor: pointer; color: #7ab8ff; font-size: 0.82rem; }}
+  .attrs {{ width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.8rem; }}
+  .attrs td {{ padding: 3px 8px 3px 0; border-bottom: 1px solid #262626; }}
+  .attrs td:first-child {{ color: #888; white-space: nowrap; }}
+  .diff {{ margin-top: 8px; font-size: 0.8rem; }}
+  .diff-line {{ padding: 2px 0; }}
+  .from-a {{ color: #7ab8ff; }}
+  .from-b {{ color: #ff9ecf; }}
+  .from-both {{ color: #888; }}
+  .changed {{ color: #ffb020; }}
 </style>
 </head>
 <body>
@@ -87,6 +100,9 @@ PAGE = """
     </form>
     <form method="POST" action="/run/next-generation">
       <button type="submit">Breed next generation (needs real scan data)</button>
+    </form>
+    <form method="POST" action="/run/add-variants">
+      <button type="submit" style="background:#7ab8ff;">Add 3 more variants (no scan data needed)</button>
     </form>
   </div>
 
@@ -147,6 +163,66 @@ def _describe_lineage(genotype: dict, catalogue_by_id: dict) -> str:
     return f"{kind} of " + " + ".join(labels)
 
 
+def _full_attributes_table(genotype: dict) -> str:
+    """All GENOTYPE_SCHEMA fields for one design, as a compact table -- the full genotype breakdown."""
+    rows = "".join(
+        f"<tr><td>{escape(field)}</td><td>{escape(str(genotype[field]))}</td></tr>" for field in GENOTYPE_SCHEMA
+    )
+    return f'<table class="attrs">{rows}</table>'
+
+
+def _lineage_diff_html(genotype: dict, catalogue_by_id: dict) -> str:
+    """
+    Field-by-field breakdown of how this design's attributes trace back to
+    its parent(s) -- this is the actual "evolution" view: which specific
+    attributes came from which parent (crossover), or which specific
+    attribute(s) changed (mutation). Empty for hand-authored/exploration
+    designs, which have nothing to diff against.
+    """
+    parents = genotype.get("parents") or []
+    if not parents:
+        return ""
+
+    if len(parents) == 2:
+        parent_a = catalogue_by_id.get(parents[0])
+        parent_b = catalogue_by_id.get(parents[1])
+        if not parent_a or not parent_b:
+            return "<div class='diff sub'>(a parent record is missing from the catalogue)</div>"
+
+        lines = []
+        for field in GENOTYPE_SCHEMA:
+            value = genotype[field]
+            matches_a = value == parent_a[field]
+            matches_b = value == parent_b[field]
+            if matches_a and matches_b:
+                css_class, source = "from-both", "either parent (same value)"
+            elif matches_a:
+                css_class, source = "from-a", f"parent A ({escape(parent_a['design_id'])})"
+            elif matches_b:
+                css_class, source = "from-b", f"parent B ({escape(parent_b['design_id'])})"
+            else:
+                css_class, source = "changed", "neither parent (unexpected)"
+            lines.append(f'<div class="diff-line {css_class}">{escape(field)}: {escape(str(value))} -- from {source}</div>')
+        return "<div class='diff'>" + "".join(lines) + "</div>"
+
+    if len(parents) == 1:
+        parent = catalogue_by_id.get(parents[0])
+        if not parent:
+            return "<div class='diff sub'>(parent record is missing from the catalogue)</div>"
+
+        lines = [
+            f'<div class="diff-line changed">{escape(field)}: '
+            f'{escape(str(parent[field]))} &rarr; {escape(str(genotype[field]))}</div>'
+            for field in GENOTYPE_SCHEMA
+            if genotype[field] != parent[field]
+        ]
+        if not lines:
+            lines = ["<div class='diff-line sub'>no attribute changed (unexpected for a mutation)</div>"]
+        return "<div class='diff'>" + "".join(lines) + "</div>"
+
+    return ""
+
+
 def render_dashboard(result_message: str = "", is_error: bool = False) -> str:
     catalogue = load_catalogue()
     catalogue_by_id = {g["design_id"]: g for g in catalogue}
@@ -170,8 +246,10 @@ def render_dashboard(result_message: str = "", is_error: bool = False) -> str:
             poster_entries = [e for e in qr_manifest if e["design_id"] == g["design_id"]]
 
             thumbs = "".join(
+                f'<a href="/poster/{escape(g["design_id"])}_{escape(e["location_code"])}.png" target="_blank" '
+                f'title="Open full-size (right-click to save)">'
                 f'<img src="/poster/{escape(g["design_id"])}_{escape(e["location_code"])}.png" class="thumb" '
-                f'onerror="this.remove()">'
+                f'onerror="this.parentElement.remove()"></a>'
                 for e in poster_entries
             )
 
@@ -183,6 +261,12 @@ def render_dashboard(result_message: str = "", is_error: bool = False) -> str:
                     statuses.append(f'<span class="{css_class}">{escape(e["location_code"])}: {r["status"]}</span>')
             status_line = " &middot; ".join(statuses) if statuses else "not yet checked"
 
+            genotype_detail = _full_attributes_table(g)
+            lineage_diff = _lineage_diff_html(g, catalogue_by_id)
+            details_body = genotype_detail + (
+                f"<div class='sub' style='margin-top:10px;'>Attribute lineage:</div>{lineage_diff}" if lineage_diff else ""
+            )
+
             generations_html.append(
                 f'''<div class="card">
                   <div class="thumbs">{thumbs or "<span class=\'sub\'>no posters yet</span>"}</div>
@@ -191,6 +275,10 @@ def render_dashboard(result_message: str = "", is_error: bool = False) -> str:
                     <span class="sub">{escape(lineage)}</span><br>
                     <span class="sub">audience: {escape(g["audience_hypothesis"])} &middot; tone: {escape(g["visual_tone"])} &middot; format: {escape(g["format"])}</span><br>
                     <span class="sub">quality: {status_line}</span>
+                    <details>
+                      <summary>Full genotype &amp; lineage breakdown</summary>
+                      {details_body}
+                    </details>
                   </div>
                 </div>'''
             )
@@ -216,6 +304,31 @@ def dashboard():
 @app.route("/poster/<path:filename>")
 def serve_poster(filename):
     return send_from_directory(POSTERS_DIR, filename)
+
+
+@app.route("/run/add-variants", methods=["POST"])
+def run_add_variants():
+    """
+    Add more candidate designs to the CURRENT generation via pure
+    exploration (Stage 6's explore() function) -- unlike breeding a new
+    generation, this needs no real scan data, since exploration doesn't
+    select survivors, it just samples the schema randomly. This is the
+    button for "I want more options to choose from right now," separate
+    from real evolutionary selection.
+    """
+    catalogue = load_catalogue()
+    current_gen = max((g["generation"] for g in catalogue), default=1)
+    count = int(request.form.get("count", 3))
+
+    new_designs = []
+    for _ in range(count):
+        fields = explore(catalogue)
+        genotype = create_genotype(current_gen, parents=[], **fields)
+        add_genotype(genotype)
+        new_designs.append(genotype)
+        catalogue.append(genotype)  # so the next explore() call can also draw text from designs just added
+
+    return render_dashboard(f"Added {len(new_designs)} new variant(s) to generation {current_gen}.")
 
 
 @app.route("/run/generate-posters", methods=["POST"])
