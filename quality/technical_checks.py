@@ -11,16 +11,20 @@ from pathlib import Path
 import cv2
 from PIL import Image, UnidentifiedImageError
 
-# Minimum pixel dimensions per format, at 150 DPI -- a common minimum for
-# posters viewed from a short distance (not the stricter 300 DPI standard
-# for close-up print like magazines). Physical sizes are approximate,
-# since the genotype schema doesn't pin down exact mm/inch dimensions per
-# format value -- only the label.
+# Minimum pixel dimensions per format, at 85 DPI -- calibrated for the
+# real requirement (clearly readable at 5-7 feet, a lamp-post poster
+# viewing distance), not close-up print quality. Common viewing-distance
+# DPI guidelines put 5-7ft in the 70-100 DPI range; 85 is a reasonable
+# middle of that band. This replaces an earlier, stricter 150 DPI
+# (magazine/handheld distance) that this project's actual use case never
+# needed. Physical sizes are approximate, since the genotype schema
+# doesn't pin down exact mm/inch dimensions per format value -- only the
+# label.
 FORMAT_MIN_RESOLUTION = {
-    "a3_poster": (1754, 2480),  # 297x420mm
-    "a4_poster": (1240, 1754),  # 210x297mm
-    "large_sticker": (600, 900),  # approx 100x150mm
-    "small_sticker": (350, 550),  # approx 60x90mm, business-card-ish
+    "a3_poster": (995, 1403),  # 297x420mm
+    "a4_poster": (706, 995),  # 210x297mm
+    "large_sticker": (340, 510),  # approx 100x150mm
+    "small_sticker": (200, 310),  # approx 60x90mm, business-card-ish
 }
 
 

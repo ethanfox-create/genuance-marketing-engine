@@ -5,3 +5,4 @@ Flask
 pandas
 opencv-python
 anthropic
+gunicorn

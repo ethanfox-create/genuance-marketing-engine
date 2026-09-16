@@ -4,15 +4,15 @@
     "location_code": "loc001",
     "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-20b2d3fc_loc001.png",
     "tier1": {
-      "passed": false,
+      "passed": true,
       "checks": {
         "file_integrity": {
           "passed": true,
           "detail": "ok"
         },
         "resolution": {
-          "passed": false,
-          "detail": "1024x1536px, needs at least 1754x2480px for a3_poster"
+          "passed": true,
+          "detail": "1024x1536px, needs at least 995x1403px for a3_poster"
         },
         "qr_readable": {
           "passed": true,
@@ -20,7 +20,12 @@
         }
       }
     },
-    "tier2": null,
+    "tier2": {
+      "configured": false,
+      "usable": null,
+      "concerns": [],
+      "notes": "ANTHROPIC_API_KEY is not set -- agent screening skipped. Set that environment variable to enable Tier 2 review."
+    },
     "status": "flagged"
   },
   {
@@ -28,15 +33,15 @@
     "location_code": "loc002",
     "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-20b2d3fc_loc002.png",
     "tier1": {
-      "passed": false,
+      "passed": true,
       "checks": {
         "file_integrity": {
           "passed": true,
           "detail": "ok"
         },
         "resolution": {
-          "passed": false,
-          "detail": "1024x1536px, needs at least 1754x2480px for a3_poster"
+          "passed": true,
+          "detail": "1024x1536px, needs at least 995x1403px for a3_poster"
         },
         "qr_readable": {
           "passed": true,
@@ -44,7 +49,12 @@
         }
       }
     },
-    "tier2": null,
+    "tier2": {
+      "configured": false,
+      "usable": null,
+      "concerns": [],
+      "notes": "ANTHROPIC_API_KEY is not set -- agent screening skipped. Set that environment variable to enable Tier 2 review."
+    },
     "status": "flagged"
   },
   {
@@ -52,15 +62,15 @@
     "location_code": "loc003",
     "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-20b2d3fc_loc003.png",
     "tier1": {
-      "passed": false,
+      "passed": true,
       "checks": {
         "file_integrity": {
           "passed": true,
           "detail": "ok"
         },
         "resolution": {
-          "passed": false,
-          "detail": "1024x1536px, needs at least 1754x2480px for a3_poster"
+          "passed": true,
+          "detail": "1024x1536px, needs at least 995x1403px for a3_poster"
         },
         "qr_readable": {
           "passed": true,
@@ -68,7 +78,12 @@
         }
       }
     },
-    "tier2": null,
+    "tier2": {
+      "configured": false,
+      "usable": null,
+      "concerns": [],
+      "notes": "ANTHROPIC_API_KEY is not set -- agent screening skipped. Set that environment variable to enable Tier 2 review."
+    },
     "status": "flagged"
   },
   {
@@ -76,15 +91,15 @@
     "location_code": "loc001",
     "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-f9eabf1b_loc001.png",
     "tier1": {
-      "passed": false,
+      "passed": true,
       "checks": {
         "file_integrity": {
           "passed": true,
           "detail": "ok"
         },
         "resolution": {
-          "passed": false,
-          "detail": "1024x1536px, needs at least 1240x1754px for a4_poster"
+          "passed": true,
+          "detail": "1024x1536px, needs at least 706x995px for a4_poster"
         },
         "qr_readable": {
           "passed": true,
@@ -92,7 +107,12 @@
         }
       }
     },
-    "tier2": null,
+    "tier2": {
+      "configured": false,
+      "usable": null,
+      "concerns": [],
+      "notes": "ANTHROPIC_API_KEY is not set -- agent screening skipped. Set that environment variable to enable Tier 2 review."
+    },
     "status": "flagged"
   },
   {
@@ -100,15 +120,15 @@
     "location_code": "loc002",
     "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-f9eabf1b_loc002.png",
     "tier1": {
-      "passed": false,
+      "passed": true,
       "checks": {
         "file_integrity": {
           "passed": true,
           "detail": "ok"
         },
         "resolution": {
-          "passed": false,
-          "detail": "1024x1536px, needs at least 1240x1754px for a4_poster"
+          "passed": true,
+          "detail": "1024x1536px, needs at least 706x995px for a4_poster"
         },
         "qr_readable": {
           "passed": true,
@@ -116,7 +136,12 @@
         }
       }
     },
-    "tier2": null,
+    "tier2": {
+      "configured": false,
+      "usable": null,
+      "concerns": [],
+      "notes": "ANTHROPIC_API_KEY is not set -- agent screening skipped. Set that environment variable to enable Tier 2 review."
+    },
     "status": "flagged"
   },
   {
@@ -124,15 +149,15 @@
     "location_code": "loc003",
     "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-f9eabf1b_loc003.png",
     "tier1": {
-      "passed": false,
+      "passed": true,
       "checks": {
         "file_integrity": {
           "passed": true,
           "detail": "ok"
         },
         "resolution": {
-          "passed": false,
-          "detail": "1024x1536px, needs at least 1240x1754px for a4_poster"
+          "passed": true,
+          "detail": "1024x1536px, needs at least 706x995px for a4_poster"
         },
         "qr_readable": {
           "passed": true,
@@ -140,7 +165,12 @@
         }
       }
     },
-    "tier2": null,
+    "tier2": {
+      "configured": false,
+      "usable": null,
+      "concerns": [],
+      "notes": "ANTHROPIC_API_KEY is not set -- agent screening skipped. Set that environment variable to enable Tier 2 review."
+    },
     "status": "flagged"
   },
   {
@@ -156,7 +186,7 @@
         },
         "resolution": {
           "passed": true,
-          "detail": "1024x1536px, needs at least 600x900px for large_sticker"
+          "detail": "1024x1536px, needs at least 340x510px for large_sticker"
         },
         "qr_readable": {
           "passed": true,
@@ -185,7 +215,7 @@
         },
         "resolution": {
           "passed": true,
-          "detail": "1024x1536px, needs at least 600x900px for large_sticker"
+          "detail": "1024x1536px, needs at least 340x510px for large_sticker"
         },
         "qr_readable": {
           "passed": true,
@@ -214,7 +244,7 @@
         },
         "resolution": {
           "passed": true,
-          "detail": "1024x1536px, needs at least 600x900px for large_sticker"
+          "detail": "1024x1536px, needs at least 340x510px for large_sticker"
         },
         "qr_readable": {
           "passed": true,
