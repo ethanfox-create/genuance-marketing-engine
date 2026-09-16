@@ -34,7 +34,9 @@ def run_quality_gate(poster_records: list[dict], catalogue_by_id: dict, qr_manif
         genotype = catalogue_by_id[poster["design_id"]]
         manifest_entry = qr_manifest_by_key[(poster["design_id"], poster["location_code"])]
 
-        tier1 = run_tier1_checks(Path(poster["poster_image_path"]), genotype["format"], manifest_entry["url"])
+        tier1 = run_tier1_checks(
+            Path(poster["poster_image_path"]), genotype["format"], manifest_entry["url"], genotype["qr_placement"]
+        )
 
         tier2 = None
         if tier1["passed"]:

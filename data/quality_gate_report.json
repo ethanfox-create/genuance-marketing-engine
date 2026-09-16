@@ -24,7 +24,7 @@
       "configured": true,
       "usable": true,
       "concerns": [],
-      "notes": "Professional nightlife/dating app advertisement with clear messaging, legible text, readable QR code, and appropriate imagery for outdoor promotion."
+      "notes": "Professional advertisement with clear messaging, readable text, functional QR code, and appropriate styling for a dating or social event promotion."
     },
     "status": "approved"
   },
@@ -53,7 +53,7 @@
       "configured": true,
       "usable": true,
       "concerns": [],
-      "notes": "Professional advertisement for an exclusive event with clear messaging, readable text, unobstructed QR code, and tasteful imagery appropriate for public display."
+      "notes": "Professional nightlife/dating app advertisement with clear messaging, legible text, readable QR code, and appropriate imagery for public display."
     },
     "status": "approved"
   },
@@ -82,7 +82,7 @@
       "configured": true,
       "usable": true,
       "concerns": [],
-      "notes": "Professional advertisement with clear text, readable QR code, and appropriate provocative styling for a dating/social app targeting young adults."
+      "notes": "Professional nightlife/dating event advertisement with clear messaging, readable QR code, and appropriate provocative styling for the target audience."
     },
     "status": "approved"
   },
@@ -111,7 +111,7 @@
       "configured": true,
       "usable": true,
       "concerns": [],
-      "notes": "Clean, professional invite-only event advertisement with legible text, clear QR code, and appropriate provocative tone for the target audience."
+      "notes": "Clean, professional invite-only event advertisement with legible text, clear visual hierarchy, and scannable QR code; appropriate for street posting."
     },
     "status": "approved"
   },
@@ -140,7 +140,7 @@
       "configured": true,
       "usable": true,
       "concerns": [],
-      "notes": "Clean, provocative invitation poster with clear typography, readable QR code, and appropriate tone for an exclusive event advertisement."
+      "notes": "Clean, professional invite-only event advertisement with legible text, readable QR code, and appropriate provocative tone for dating/social app marketing."
     },
     "status": "approved"
   },
@@ -169,7 +169,7 @@
       "configured": true,
       "usable": true,
       "concerns": [],
-      "notes": "A sleek, minimalist invite-only event advertisement with clear typography, readable QR code, and sophisticated dark aesthetic appropriate for outdoor posting."
+      "notes": "The advertisement is visually clear with legible text, an unobstructed QR code, and appropriate provocative messaging for an exclusive dating or social event promotion."
     },
     "status": "approved"
   },
@@ -198,7 +198,7 @@
       "configured": true,
       "usable": true,
       "concerns": [],
-      "notes": "A visually polished advertisement with clear typography, vibrant abstract background, and a readable QR code promoting an event reservation with an intriguing, tasteful tone appropriate for public display."
+      "notes": "Professional event invitation poster with clear typography, vibrant abstract design, and scannable QR code suitable for public display."
     },
     "status": "approved"
   },
@@ -227,7 +227,7 @@
       "configured": true,
       "usable": true,
       "concerns": [],
-      "notes": "Professional event invitation poster with clear typography, vibrant design, legible QR code, and appropriate content for public advertising."
+      "notes": "A visually striking promotional poster with clear typography, readable QR code, and vibrant abstract background suitable for outdoor advertising."
     },
     "status": "approved"
   },
@@ -256,7 +256,1312 @@
       "configured": true,
       "usable": true,
       "concerns": [],
-      "notes": "Visually polished mystery event advertisement with clear messaging and scannable QR code, appropriate for public posting."
+      "notes": "Visually polished poster with clear typography, readable QR code, and appropriate provocative-but-tasteful messaging suitable for a dating or social event app advertisement."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-5640b388",
+    "location_code": "loc001",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-5640b388_loc001.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 706x995px for a4_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Sleek, modern advertisement with clear typography, vibrant neon aesthetic, legible QR code, and appropriate provocative tone for an exclusive event or dating app promotion."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-5640b388",
+    "location_code": "loc002",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-5640b388_loc002.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 706x995px for a4_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "A visually polished, modern advertisement with clear typography, vibrant neon aesthetic, legible QR code, and appropriate content for public display."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-5640b388",
+    "location_code": "loc003",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-5640b388_loc003.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 706x995px for a4_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Modern, visually appealing advertisement with clear messaging, legible text, and an unobstructed QR code suitable for street posting."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-44b23a27",
+    "location_code": "loc001",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-44b23a27_loc001.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 200x310px for small_sticker"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "A well-designed, legible event invitation poster with clear call-to-action, readable QR code, and appropriate provocative tone for a dating or social event app."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-44b23a27",
+    "location_code": "loc002",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-44b23a27_loc002.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 200x310px for small_sticker"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Clean, professionally designed event invitation poster with clear typography, legible QR code, and appropriate provocative messaging for entertainment/nightlife advertising."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-44b23a27",
+    "location_code": "loc003",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-44b23a27_loc003.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 200x310px for small_sticker"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "A well-designed event invitation poster with clear typography, legible QR code, and appropriate provocative messaging for a dating/social event advertisement."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-f916d298",
+    "location_code": "loc001",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-f916d298_loc001.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 706x995px for a4_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Professional event poster with clear typography, readable QR code, and striking visual design suitable for outdoor advertising."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-f916d298",
+    "location_code": "loc002",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-f916d298_loc002.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 706x995px for a4_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Professional event poster with clear typography, readable QR code, and visually cohesive design using dramatic red texture background."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-f916d298",
+    "location_code": "loc003",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-f916d298_loc003.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 706x995px for a4_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Professional event poster with clear typography, readable QR code, and striking visual design suitable for outdoor advertising."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-71486de7",
+    "location_code": "loc001",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-71486de7_loc001.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 340x510px for large_sticker"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Professional dating app advertisement with clear messaging, readable QR code, and appropriate flirtatious tone suitable for public display."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-71486de7",
+    "location_code": "loc002",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-71486de7_loc002.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 340x510px for large_sticker"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Professional dating app advertisement with clear messaging, legible text, scannable QR code, and tasteful imagery appropriate for public display."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-71486de7",
+    "location_code": "loc003",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-71486de7_loc003.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 340x510px for large_sticker"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Professional dating app advertisement with clear messaging, legible text, readable QR code, and appropriate provocative-but-tasteful imagery suitable for public outdoor display."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-b558193d",
+    "location_code": "loc001",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-b558193d_loc001.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 706x995px for a4_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Clean, professional event promotion poster with clear messaging, legible text, readable QR code, and appropriate content for public display."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-b558193d",
+    "location_code": "loc002",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-b558193d_loc002.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 706x995px for a4_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Clean, visually appealing poster for an event reservation with clear text, readable QR code, and professional design suitable for street posting."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-b558193d",
+    "location_code": "loc003",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-b558193d_loc003.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 706x995px for a4_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Clean, professional event advertisement with clear messaging, readable text, legible QR code, and appropriate content for public posting."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-94f4e83d",
+    "location_code": "loc001",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-94f4e83d_loc001.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 995x1403px for a3_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Professional event poster with clear messaging, legible text, scannable QR code, and appropriate provocative tone for dating/social app advertising."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-94f4e83d",
+    "location_code": "loc002",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-94f4e83d_loc002.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 995x1403px for a3_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "This is a well-designed event poster with clear typography, scannable QR code, and an intriguing call-to-action appropriate for public advertising."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-94f4e83d",
+    "location_code": "loc003",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-94f4e83d_loc003.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 995x1403px for a3_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Professional event poster with clear typography, readable QR code, and appropriate provocative messaging for dating/social app advertising."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-ba9a5a0d",
+    "location_code": "loc001",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-ba9a5a0d_loc001.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 340x510px for large_sticker"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Professional event promotion poster with clear typography, readable QR code, and appropriate provocative messaging for an invite-only venue advertisement."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-ba9a5a0d",
+    "location_code": "loc002",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-ba9a5a0d_loc002.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 340x510px for large_sticker"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Professional, visually appealing advertisement with clear messaging, readable text, and functional QR code for an exclusive invite-only event."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-ba9a5a0d",
+    "location_code": "loc003",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-ba9a5a0d_loc003.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 340x510px for large_sticker"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Sleek, modern poster design for an exclusive event with clear messaging, readable QR code, and appropriate provocative tone for a dating or social app."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-3855be0e",
+    "location_code": "loc001",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-3855be0e_loc001.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 995x1403px for a3_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Clean, professional advertisement with legible text, clear QR code, and appropriate visual design for public posting."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-3855be0e",
+    "location_code": "loc002",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-3855be0e_loc002.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 995x1403px for a3_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Clean, professional poster with legible text, clear QR code, and visually cohesive design suitable for street advertising."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-3855be0e",
+    "location_code": "loc003",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-3855be0e_loc003.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 995x1403px for a3_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Professional promotional poster for an exclusive event with clear messaging, readable QR code, and appropriate visual design for public advertising."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-d3d81082",
+    "location_code": "loc001",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-d3d81082_loc001.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 200x310px for small_sticker"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Professional event invitation poster with clear typography, readable QR code, and appropriate flirtatious tone suitable for dating app advertising."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-d3d81082",
+    "location_code": "loc002",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-d3d81082_loc002.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 200x310px for small_sticker"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Professional dating app advertisement with clear messaging, readable text, functional QR code, and appropriate imagery for public display."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-d3d81082",
+    "location_code": "loc003",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-d3d81082_loc003.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 200x310px for small_sticker"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Professional dating app advertisement with clear messaging, legible text, readable QR code, and appropriate provocative tone for the target audience."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-65b50974",
+    "location_code": "loc001",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-65b50974_loc001.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 995x1403px for a3_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Professional dating app advertisement with clear messaging, readable QR code, and appropriate imagery for public display."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-65b50974",
+    "location_code": "loc002",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-65b50974_loc002.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 995x1403px for a3_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Professional advertisement for a dating or social app with clear messaging, readable QR code, and appropriate visual presentation for public posting."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-65b50974",
+    "location_code": "loc003",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-65b50974_loc003.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 995x1403px for a3_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Professional promotional poster for an event or service with clear messaging, legible text, readable QR code, and appropriate imagery for public display."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-064e33e0",
+    "location_code": "loc001",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-064e33e0_loc001.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 706x995px for a4_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Visually striking modern design with clear typography, legible text, and readable QR code; appropriate for public advertising with tasteful use of color and abstract imagery to promote event reservation."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-064e33e0",
+    "location_code": "loc002",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-064e33e0_loc002.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 706x995px for a4_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Professional, modern design with clear typography, readable QR code, and tasteful abstract imagery suitable for outdoor advertising."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-064e33e0",
+    "location_code": "loc003",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-064e33e0_loc003.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 706x995px for a4_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Visually striking modern design with clear typography, legible text, and unobstructed QR code; appropriate for public advertising."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-acc2688e",
+    "location_code": "loc001",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-acc2688e_loc001.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 200x310px for small_sticker"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Professional promotional poster with clear typography, readable QR code, and appropriate content for an invite-only event advertisement."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-acc2688e",
+    "location_code": "loc002",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-acc2688e_loc002.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 200x310px for small_sticker"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Professional event invitation poster with clear messaging, readable QR code, and appropriate promotional content for an invite-only social event."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-acc2688e",
+    "location_code": "loc003",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-acc2688e_loc003.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 200x310px for small_sticker"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Professional promotional poster for an exclusive event with clear messaging, readable QR code, and appropriate styling for public advertising."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-2ca392c4",
+    "location_code": "loc001",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-2ca392c4_loc001.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 706x995px for a4_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Professional advertisement for an exclusive event with clear messaging, readable QR code, and tasteful imagery appropriate for public posting."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-2ca392c4",
+    "location_code": "loc002",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-2ca392c4_loc002.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 706x995px for a4_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Professional, visually clear advertisement with legible text, readable QR code, and tasteful imagery appropriate for public display promoting an invite-only event."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-2ca392c4",
+    "location_code": "loc003",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-2ca392c4_loc003.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 706x995px for a4_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Professional advertisement for an exclusive invite-only event with clear messaging, readable QR code, and tasteful styling appropriate for public display."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-2f66a5f5",
+    "location_code": "loc001",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-2f66a5f5_loc001.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 340x510px for large_sticker"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Professional promotional poster with clear messaging, readable QR code, and appropriate provocative styling for an exclusive event advertisement."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-2f66a5f5",
+    "location_code": "loc002",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-2f66a5f5_loc002.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 340x510px for large_sticker"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "High-quality, visually striking advertisement with clear messaging, legible text, and an unobstructed QR code suitable for outdoor posting."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-2f66a5f5",
+    "location_code": "loc003",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-2f66a5f5_loc003.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 340x510px for large_sticker"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Professional event promotion poster with clear typography, legible QR code, and appropriate atmospheric imagery for an exclusive nightlife venue."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-32789c46",
+    "location_code": "loc001",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-32789c46_loc001.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 706x995px for a4_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "This is a professionally designed promotional poster for an exclusive event with clear messaging, readable text, scannable QR code, and tasteful stylized artwork appropriate for public advertising."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-32789c46",
+    "location_code": "loc002",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-32789c46_loc002.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 706x995px for a4_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Professional event promotion poster with clear messaging, legible text, readable QR code, and stylized artwork appropriate for public advertising."
+    },
+    "status": "approved"
+  },
+  {
+    "design_id": "gen1-32789c46",
+    "location_code": "loc003",
+    "poster_image_path": "C:\\Users\\sivan\\Documents\\genuance-marketing-engine\\data\\posters\\gen1-32789c46_loc003.png",
+    "tier1": {
+      "passed": true,
+      "checks": {
+        "file_integrity": {
+          "passed": true,
+          "detail": "ok"
+        },
+        "resolution": {
+          "passed": true,
+          "detail": "1024x1536px, needs at least 706x995px for a4_poster"
+        },
+        "qr_readable": {
+          "passed": true,
+          "detail": "ok"
+        }
+      }
+    },
+    "tier2": {
+      "configured": true,
+      "usable": true,
+      "concerns": [],
+      "notes": "Well-designed promotional poster for an exclusive event with clear typography, readable QR code, and tasteful artwork appropriate for public advertising."
     },
     "status": "approved"
   }

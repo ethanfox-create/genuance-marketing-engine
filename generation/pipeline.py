@@ -18,8 +18,16 @@ whole batch. build_posters() returns both what succeeded and what didn't,
 so the caller can report a clear summary and decide what to do about the
 failures (rewrite that genotype's prompt, retry, drop it from this
 generation).
+
+A batch of many new designs generated back to back can also trip the
+image API's per-minute rate limit outright (dalle_client.py retries
+individual transient failures, but a large batch is better off not
+hammering the API in the first place) -- REQUEST_DELAY_SECONDS spaces out
+fresh generation calls. Cached backgrounds (already on disk) are unaffected
+and composite immediately with no delay.
 """
 
+import time
 from pathlib import Path
 
 from dalle_client import generate_background_image
@@ -29,6 +37,8 @@ from prompt_builder import build_image_prompt
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 BACKGROUNDS_DIR = PROJECT_ROOT / "data" / "poster_backgrounds"
 POSTERS_DIR = PROJECT_ROOT / "data" / "posters"
+
+REQUEST_DELAY_SECONDS = 3
 
 
 def get_or_generate_background(genotype: dict) -> Path:
@@ -55,6 +65,7 @@ def build_posters(catalogue: list[dict], qr_manifest: list[dict]) -> dict:
     catalogue_by_id = {genotype["design_id"]: genotype for genotype in catalogue}
     posters = []
     failed_designs: dict[str, str] = {}
+    fresh_generation_count = 0
 
     for entry in qr_manifest:
         design_id = entry["design_id"]
@@ -63,7 +74,11 @@ def build_posters(catalogue: list[dict], qr_manifest: list[dict]) -> dict:
         if design_id in failed_designs:
             continue  # already failed to generate a background for this design earlier in this run
 
-        if design_id not in {p["design_id"] for p in posters} and not (BACKGROUNDS_DIR / f"{design_id}.png").exists():
+        needs_generation = not (BACKGROUNDS_DIR / f"{design_id}.png").exists()
+        if needs_generation:
+            if fresh_generation_count > 0:
+                time.sleep(REQUEST_DELAY_SECONDS)
+            fresh_generation_count += 1
             print(f"Generating background for {design_id}...")
 
         try:

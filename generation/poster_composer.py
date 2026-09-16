@@ -93,6 +93,34 @@ def _wrap_text(draw: ImageDraw.ImageDraw, text: str, font: ImageFont.FreeTypeFon
     return lines
 
 
+def compute_qr_card_geometry(width: int, height: int, qr_placement: str) -> dict:
+    """
+    Returns the geometry of the QR's white quiet-zone card, given the
+    canvas size and placement: {card_x, card_y, card_size, qr_size,
+    padding}. Pulled out as its own function so Stage 7's quality gate can
+    find the exact same region this module draws the QR into -- without
+    it, a QR-readability check on the full poster has to search the whole
+    image for a small code, which OpenCV's detector is bad at even when
+    the code is perfectly scannable up close (verified: a poster that
+    "failed" QR detection decoded correctly the moment it was cropped to
+    this exact region).
+    """
+    qr_scale = QR_SCALE.get(qr_placement, 0.17)
+    qr_size = int(min(width, height) * qr_scale)
+    padding = int(qr_size * 0.12)
+    card_size = qr_size + 2 * padding
+    margin = int(width * 0.06)
+
+    positions = {
+        "bottom_right": (width - card_size - margin, height - card_size - margin),
+        "bottom_centre": ((width - card_size) // 2, height - card_size - margin),
+        "integrated": (margin, height - card_size - margin),
+        "dominant_centre": ((width - card_size) // 2, (height - card_size) // 2),
+    }
+    card_x, card_y = positions.get(qr_placement, positions["bottom_right"])
+    return {"card_x": card_x, "card_y": card_y, "card_size": card_size, "qr_size": qr_size, "padding": padding}
+
+
 def _draw_centered_lines(
     draw: ImageDraw.ImageDraw,
     lines: list[str],
@@ -139,18 +167,9 @@ def compose_poster(genotype: dict, background_path: Path, qr_image_path: Path, o
         _draw_centered_lines(draw, subtext_lines, subtext_font, width / 2, next_y + int(height * 0.015), fill="white")
 
     # --- QR code, on its own white quiet-zone card for scannability ---
-    qr_scale = QR_SCALE.get(genotype["qr_placement"], 0.17)
-    qr_size = int(min(width, height) * qr_scale)
-    padding = int(qr_size * 0.12)
-    card_size = qr_size + 2 * padding
-
-    positions = {
-        "bottom_right": (width - card_size - margin, height - card_size - margin),
-        "bottom_centre": ((width - card_size) // 2, height - card_size - margin),
-        "integrated": (margin, height - card_size - margin),
-        "dominant_centre": ((width - card_size) // 2, (height - card_size) // 2),
-    }
-    card_x, card_y = positions.get(genotype["qr_placement"], positions["bottom_right"])
+    geometry = compute_qr_card_geometry(width, height, genotype["qr_placement"])
+    card_x, card_y, card_size = geometry["card_x"], geometry["card_y"], geometry["card_size"]
+    qr_size, padding = geometry["qr_size"], geometry["padding"]
 
     draw.rounded_rectangle(
         [card_x, card_y, card_x + card_size, card_y + card_size],
@@ -169,7 +188,19 @@ def compose_poster(genotype: dict, background_path: Path, qr_image_path: Path, o
         text_w, text_h = right - left, bottom - top
         pad_x, pad_y = int(text_w * 0.25), int(text_h * 0.4)
 
+        # Anchored above the QR card by default, but clamped so the pill
+        # never extends past the canvas edges -- a wide CTA string (e.g.
+        # "Reserve your spot") paired with an edge-hugging qr_placement
+        # like bottom_right previously got silently clipped by Pillow,
+        # which draws happily off-canvas with no error or warning.
+        pill_half_width = text_w / 2 + pad_x
+        min_center = margin + pill_half_width
+        max_center = width - margin - pill_half_width
         cta_center_x = card_x + card_size / 2
+        if min_center <= max_center:
+            cta_center_x = max(min_center, min(cta_center_x, max_center))
+        else:
+            cta_center_x = width / 2  # text too wide to fit within margins either way -- center it as a fallback
         cta_top = card_y - text_h - pad_y * 2 - int(height * 0.015)
 
         chip_fill = accent if style["pill"] else (0, 0, 0, 160)
