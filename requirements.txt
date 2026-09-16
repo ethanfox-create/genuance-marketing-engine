@@ -2,3 +2,4 @@ qrcode[pil]
 Pillow
 openai
 Flask
+pandas

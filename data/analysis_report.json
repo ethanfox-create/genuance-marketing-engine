@@ -1,0 +1,234 @@
+{
+  "attribute_performance": {
+    "visual_style": [
+      {
+        "value": "abstract_graphic",
+        "n_designs": 1,
+        "total_scans": 0,
+        "avg_scan_rate": 0.0,
+        "low_confidence": true
+      },
+      {
+        "value": "photography_couple",
+        "n_designs": 1,
+        "total_scans": 0,
+        "avg_scan_rate": 0.0,
+        "low_confidence": true
+      },
+      {
+        "value": "typographic_only",
+        "n_designs": 1,
+        "total_scans": 0,
+        "avg_scan_rate": 0.0,
+        "low_confidence": true
+      }
+    ],
+    "visual_tone": [
+      {
+        "value": "playful",
+        "n_designs": 1,
+        "total_scans": 0,
+        "avg_scan_rate": 0.0,
+        "low_confidence": true
+      },
+      {
+        "value": "provocative",
+        "n_designs": 1,
+        "total_scans": 0,
+        "avg_scan_rate": 0.0,
+        "low_confidence": true
+      },
+      {
+        "value": "sophisticated",
+        "n_designs": 1,
+        "total_scans": 0,
+        "avg_scan_rate": 0.0,
+        "low_confidence": true
+      }
+    ],
+    "headline_strategy": [
+      {
+        "value": "humour",
+        "n_designs": 1,
+        "total_scans": 0,
+        "avg_scan_rate": 0.0,
+        "low_confidence": true
+      },
+      {
+        "value": "question",
+        "n_designs": 1,
+        "total_scans": 0,
+        "avg_scan_rate": 0.0,
+        "low_confidence": true
+      },
+      {
+        "value": "statement",
+        "n_designs": 1,
+        "total_scans": 0,
+        "avg_scan_rate": 0.0,
+        "low_confidence": true
+      }
+    ],
+    "colour_scheme": [
+      {
+        "value": "dark_neon_accent",
+        "n_designs": 1,
+        "total_scans": 0,
+        "avg_scan_rate": 0.0,
+        "low_confidence": true
+      },
+      {
+        "value": "monochrome",
+        "n_designs": 1,
+        "total_scans": 0,
+        "avg_scan_rate": 0.0,
+        "low_confidence": true
+      },
+      {
+        "value": "warm_tones",
+        "n_designs": 1,
+        "total_scans": 0,
+        "avg_scan_rate": 0.0,
+        "low_confidence": true
+      }
+    ],
+    "typography_style": [
+      {
+        "value": "bold_sans",
+        "n_designs": 1,
+        "total_scans": 0,
+        "avg_scan_rate": 0.0,
+        "low_confidence": true
+      },
+      {
+        "value": "elegant_serif",
+        "n_designs": 1,
+        "total_scans": 0,
+        "avg_scan_rate": 0.0,
+        "low_confidence": true
+      },
+      {
+        "value": "hand_drawn",
+        "n_designs": 1,
+        "total_scans": 0,
+        "avg_scan_rate": 0.0,
+        "low_confidence": true
+      }
+    ],
+    "cta_prominence": [
+      {
+        "value": "dominant",
+        "n_designs": 1,
+        "total_scans": 0,
+        "avg_scan_rate": 0.0,
+        "low_confidence": true
+      },
+      {
+        "value": "integrated",
+        "n_designs": 1,
+        "total_scans": 0,
+        "avg_scan_rate": 0.0,
+        "low_confidence": true
+      },
+      {
+        "value": "subordinate",
+        "n_designs": 1,
+        "total_scans": 0,
+        "avg_scan_rate": 0.0,
+        "low_confidence": true
+      }
+    ],
+    "qr_placement": [
+      {
+        "value": "bottom_right",
+        "n_designs": 1,
+        "total_scans": 0,
+        "avg_scan_rate": 0.0,
+        "low_confidence": true
+      },
+      {
+        "value": "dominant_centre",
+        "n_designs": 1,
+        "total_scans": 0,
+        "avg_scan_rate": 0.0,
+        "low_confidence": true
+      },
+      {
+        "value": "integrated",
+        "n_designs": 1,
+        "total_scans": 0,
+        "avg_scan_rate": 0.0,
+        "low_confidence": true
+      }
+    ],
+    "format": [
+      {
+        "value": "a3_poster",
+        "n_designs": 1,
+        "total_scans": 0,
+        "avg_scan_rate": 0.0,
+        "low_confidence": true
+      },
+      {
+        "value": "a4_poster",
+        "n_designs": 1,
+        "total_scans": 0,
+        "avg_scan_rate": 0.0,
+        "low_confidence": true
+      },
+      {
+        "value": "large_sticker",
+        "n_designs": 1,
+        "total_scans": 0,
+        "avg_scan_rate": 0.0,
+        "low_confidence": true
+      }
+    ],
+    "brand_safety": [
+      {
+        "value": "bold",
+        "n_designs": 1,
+        "total_scans": 0,
+        "avg_scan_rate": 0.0,
+        "low_confidence": true
+      },
+      {
+        "value": "conservative",
+        "n_designs": 1,
+        "total_scans": 0,
+        "avg_scan_rate": 0.0,
+        "low_confidence": true
+      },
+      {
+        "value": "moderate",
+        "n_designs": 1,
+        "total_scans": 0,
+        "avg_scan_rate": 0.0,
+        "low_confidence": true
+      }
+    ]
+  },
+  "audience_hypothesis": [
+    {
+      "design_id": "gen1-20b2d3fc",
+      "audience_hypothesis": "nightlife_crowd",
+      "scan_count": 0,
+      "exposure": 3,
+      "scan_rate": 0.0
+    },
+    {
+      "design_id": "gen1-f9eabf1b",
+      "audience_hypothesis": "young_professionals",
+      "scan_count": 0,
+      "exposure": 3,
+      "scan_rate": 0.0
+    },
+    {
+      "design_id": "gen1-dd4f3d84",
+      "audience_hypothesis": "queer_community",
+      "scan_count": 0,
+      "exposure": 3,
+      "scan_rate": 0.0
+    }
+  ]
+}
