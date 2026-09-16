@@ -73,8 +73,8 @@ RSVP_PAGE = """
 
 @app.route("/")
 def health_check():
-    """Lets a hosting platform (or you) confirm the server is up."""
-    return jsonify({"status": "ok", "service": "genuance-marketing-engine scan tracker"})
+    """Lets a hosting platform (or you) confirm the server is up, without naming the project to any visitor."""
+    return jsonify({"status": "ok"})
 
 
 @app.route("/rsvp")
