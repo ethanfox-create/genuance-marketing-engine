@@ -1,12 +1,22 @@
 """
-Stage 3: DALL-E prompt builder.
+Stage 3: image generation prompt builder.
 
 Turns a genotype's *visual* fields into a text prompt for the image
 generation API. Deliberately says nothing about the headline, subtext, or
 call-to-action text -- image models are unreliable at rendering legible
 text, so those are composited on afterward with Pillow (poster_composer.py)
-instead of being requested from DALL-E. We explicitly tell the model not
+instead of being requested from the image model. We explicitly tell it not
 to include any text or logos, to keep the background clean for that.
+
+Word choice matters here beyond style: this is dating-app advertising, so
+"provocative" / "bold" genotype values sit close to the line automated
+moderation systems flag, even when the actual intent is tasteful. Every
+tone and brand_safety phrase below leans toward "confident/flirtatious
+editorial photography" rather than words like "intimate" or "charged" that
+read as sexual content to a moderation classifier -- and every prompt ends
+with an explicit editorial/fully-clothed/no-nudity clause. If a specific
+genotype still gets rejected, pipeline.py catches that per-design rather
+than crashing the whole batch.
 """
 
 VISUAL_STYLE_PROMPTS = {
@@ -18,7 +28,7 @@ VISUAL_STYLE_PROMPTS = {
 }
 
 VISUAL_TONE_PROMPTS = {
-    "provocative": "provocative, intimate, charged energy",
+    "provocative": "confident, flirtatious, high-energy",
     "playful": "playful, lighthearted, fun energy",
     "sophisticated": "sophisticated, refined, upscale mood",
     "edgy": "edgy, bold, unconventional mood",
@@ -34,20 +44,21 @@ COLOUR_SCHEME_PROMPTS = {
 }
 
 BRAND_SAFETY_PROMPTS = {
-    "conservative": "tasteful and suggestive rather than explicit",
-    "moderate": "confident and a little daring, but not explicit",
-    "bold": "bold and provocative, but not explicit or crude",
+    "conservative": "tasteful and understated",
+    "moderate": "confident and a little daring, tasteful",
+    "bold": "bold and eye-catching, tasteful rather than explicit",
 }
 
 
 def build_image_prompt(genotype: dict) -> str:
-    """Build a DALL-E prompt from a genotype record's visual attributes."""
+    """Build an image-generation prompt from a genotype record's visual attributes."""
     parts = [
         VISUAL_STYLE_PROMPTS.get(genotype["visual_style"], "a striking photograph"),
         f"with a {VISUAL_TONE_PROMPTS.get(genotype['visual_tone'], 'compelling')} feel",
         f"using {COLOUR_SCHEME_PROMPTS.get(genotype['colour_scheme'], 'a bold colour palette')}",
         f"intended to appeal to: {genotype['audience_hypothesis']}",
         BRAND_SAFETY_PROMPTS.get(genotype["brand_safety"], "tasteful"),
+        "editorial advertising photography style, all subjects fully clothed, no nudity, no sexual content",
         "no text, no words, no letters, no logos in the image",
         "vertical poster composition, professional advertising photography quality",
     ]

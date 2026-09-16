@@ -1,8 +1,14 @@
 """
-Stage 3: DALL-E API client.
+Stage 3: OpenAI image generation client.
 
 Calls OpenAI's image generation API to produce the background artwork for
 one poster, from a prompt built by prompt_builder.py.
+
+Originally written against DALL-E 3, which OpenAI has since retired --
+this now targets gpt-image-1, the current stable model in the same
+`images.generate` family. Unlike DALL-E 3, gpt-image-1 returns the image
+as base64-encoded data directly in the response rather than a URL to
+download, so there's no separate fetch step.
 
 Requires an OPENAI_API_KEY environment variable. Never hardcode an API key
 in a source file -- this repo is version-controlled and pushed to GitHub
@@ -10,14 +16,14 @@ in a source file -- this repo is version-controlled and pushed to GitHub
 committed.
 """
 
+import base64
 import os
-import urllib.request
 from pathlib import Path
 
 from openai import OpenAI
 
-MODEL = "dall-e-3"
-SIZE = "1024x1792"  # tallest native DALL-E 3 size -- closest fit to a poster
+MODEL = "gpt-image-1"
+SIZE = "1024x1536"  # tallest supported size -- closest fit to a poster
 
 
 def _client() -> OpenAI:
@@ -34,7 +40,7 @@ def _client() -> OpenAI:
 
 def generate_background_image(prompt: str, output_path: Path) -> Path:
     """
-    Call DALL-E with `prompt`, download the resulting image, and save it to
+    Call the image model with `prompt` and save the resulting image to
     output_path. Returns output_path.
     """
     output_path = Path(output_path)
@@ -48,6 +54,6 @@ def generate_background_image(prompt: str, output_path: Path) -> Path:
         n=1,
     )
 
-    image_url = response.data[0].url
-    urllib.request.urlretrieve(image_url, output_path)
+    image_bytes = base64.b64decode(response.data[0].b64_json)
+    output_path.write_bytes(image_bytes)
     return output_path

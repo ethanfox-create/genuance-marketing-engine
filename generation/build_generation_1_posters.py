@@ -54,8 +54,15 @@ def main() -> None:
     with open(QR_MANIFEST_PATH, "r", encoding="utf-8") as f:
         qr_manifest = json.load(f)
 
-    results = build_posters(catalogue, qr_manifest)
-    print(f"Generated {len(results)} poster(s) in {PROJECT_ROOT / 'data' / 'posters'}")
+    result = build_posters(catalogue, qr_manifest)
+    posters = result["posters"]
+    failed_designs = result["failed_designs"]
+
+    print(f"\nGenerated {len(posters)} poster(s) in {PROJECT_ROOT / 'data' / 'posters'}")
+    if failed_designs:
+        print(f"{len(failed_designs)} design(s) failed and were skipped:")
+        for design_id, error in failed_designs.items():
+            print(f"  {design_id}: {error}")
 
 
 if __name__ == "__main__":
