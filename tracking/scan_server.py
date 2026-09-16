@@ -29,17 +29,22 @@ code's URL can't be changed after the fact.
 
 /export is a lightweight backup route: free-tier hosting can have
 ephemeral disk storage that resets on redeploy, so this lets you pull a
-copy of the real scan log periodically rather than relying solely on the
-live server's disk. Protected by SCAN_EXPORT_TOKEN so a random visitor
-can't just read your data -- set that environment variable before
-deploying, and query ?token=<value> to use it.
+copy of the real scan AND location data periodically rather than relying
+solely on the live server's disk. /admin is a mobile-friendly page for
+adding placement locations while out in the field -- bookmark it on your
+phone rather than needing a laptop to run tracking/locations.py's
+add_location(). Both are protected by the same SCAN_EXPORT_TOKEN so a
+random visitor can't read or write your data -- set that environment
+variable before deploying, and pass ?token=<value> to use either route.
 """
 
 import os
 import sys
+from html import escape
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from locations import add_location, load_locations  # noqa: E402
 from scans import load_scans, record_scan  # noqa: E402
 
 from flask import Flask, abort, jsonify, redirect, request
@@ -90,13 +95,95 @@ def track_scan(design_id, location_code):
     return redirect(landing_url, code=302)
 
 
+def _require_token():
+    """Shared guard for the operator-only routes below. Reuses SCAN_EXPORT_TOKEN
+    rather than asking for yet another environment variable to configure."""
+    expected = os.environ.get("SCAN_EXPORT_TOKEN")
+    if not expected or request.values.get("token") != expected:
+        abort(403)
+
+
 @app.route("/export")
 def export_scans():
-    token = request.args.get("token")
-    expected = os.environ.get("SCAN_EXPORT_TOKEN")
-    if not expected or token != expected:
-        abort(403)
-    return jsonify(load_scans())
+    """Backup route: pull real scan AND location data in one shot. Free-tier
+    hosting can have ephemeral disk storage that resets on redeploy, so this
+    is meant to be hit periodically during a campaign, not just once."""
+    _require_token()
+    return jsonify({"scans": load_scans(), "locations": load_locations()})
+
+
+ADMIN_PAGE_TEMPLATE = """
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Add location</title>
+<style>
+  body {{ background: #111; color: #eee; font-family: -apple-system, "Segoe UI", sans-serif;
+          margin: 0; padding: 20px; font-size: 16px; }}
+  h1 {{ font-size: 1.2rem; }}
+  label {{ display: block; margin-top: 14px; font-size: 0.9rem; color: #aaa; }}
+  input {{ width: 100%; box-sizing: border-box; padding: 12px; font-size: 16px;
+           border-radius: 6px; border: 1px solid #444; background: #1c1c1c; color: #eee; margin-top: 4px; }}
+  button {{ margin-top: 18px; width: 100%; padding: 14px; font-size: 16px; font-weight: bold;
+            border-radius: 6px; border: none; background: #39FF88; color: #000; }}
+  .msg {{ margin-top: 14px; padding: 10px; border-radius: 6px; background: #163; }}
+  table {{ width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 0.85rem; }}
+  td, th {{ text-align: left; padding: 6px 4px; border-bottom: 1px solid #333; }}
+</style>
+</head>
+<body>
+  <h1>Add a placement location</h1>
+  {message}
+  <form method="POST" action="/admin?token={token}">
+    <label>Location code (short, unique, e.g. annex_01)</label>
+    <input name="location_code" required>
+    <label>Description (cross street, landmark)</label>
+    <input name="description" required>
+    <label>Neighbourhood</label>
+    <input name="neighbourhood" required>
+    <button type="submit">Save location</button>
+  </form>
+  <table>
+    <tr><th>Code</th><th>Description</th><th>Neighbourhood</th></tr>
+    {rows}
+  </table>
+</body>
+</html>
+"""
+
+
+@app.route("/admin", methods=["GET", "POST"])
+def admin_locations():
+    """
+    Mobile-friendly page for adding placement locations while physically out
+    putting posters up -- bookmark https://<your-domain>/admin?token=<token>
+    on your phone. Replaces having to run Python locally to call
+    tracking/locations.py's add_location().
+    """
+    _require_token()
+    token = request.values.get("token")
+    message = ""
+
+    if request.method == "POST":
+        try:
+            add_location(
+                location_code=request.form["location_code"].strip(),
+                description=request.form["description"].strip(),
+                neighbourhood=request.form["neighbourhood"].strip(),
+            )
+            message = '<div class="msg">Saved.</div>'
+        except ValueError as exc:
+            message = f'<div class="msg">Error: {escape(str(exc))}</div>'
+
+    rows = "".join(
+        f"<tr><td>{escape(loc['location_code'])}</td>"
+        f"<td>{escape(loc['description'])}</td>"
+        f"<td>{escape(loc['neighbourhood'])}</td></tr>"
+        for loc in reversed(load_locations())
+    )
+    return ADMIN_PAGE_TEMPLATE.format(message=message, token=escape(token or ""), rows=rows)
 
 
 if __name__ == "__main__":
